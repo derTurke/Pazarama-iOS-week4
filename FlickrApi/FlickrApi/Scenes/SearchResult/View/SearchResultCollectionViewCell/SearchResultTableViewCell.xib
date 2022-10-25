@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="282" id="KGk-i7-Jjw" customClass="SearchResultTableViewCell" customModule="FlickrApi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="282"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="282"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keE-qk-2AX">
+                        <rect key="frame" x="254" y="245" width="56" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="Ew6-ck-iPw"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="bookmark2.fill">
+                            <color key="titleColor" name="Primary"/>
+                            <color key="titleShadowColor" name="Primary"/>
+                        </state>
+                        <buttonConfiguration key="configuration" style="plain" image="bookmark2">
+                            <color key="baseForegroundColor" name="Primary"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="didTapCollectionButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="UmB-eb-0nj"/>
+                        </connections>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n7x-CI-VYc">
+                        <rect key="frame" x="10" y="5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="HEJ-gg-orW"/>
+                            <constraint firstAttribute="height" constant="40" id="Tug-cB-sGV"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8e-HD-bbB">
+                        <rect key="frame" x="58" y="25" width="262" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HrJ-HD-pyq">
+                        <rect key="frame" x="0.0" y="50" width="320" height="190"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="190" id="Mi9-Br-51L"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NX0-T7-JjN">
+                        <rect key="frame" x="10" y="245" width="56" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="zwi-yK-saz"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="" image="like.fill">
+                            <color key="titleColor" name="Primary"/>
+                            <color key="titleShadowColor" name="Primary"/>
+                        </state>
+                        <buttonConfiguration key="configuration" style="plain" image="like" title="">
+                            <color key="baseForegroundColor" name="Primary"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="didTapLikedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ijy-oY-a6j"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NX0-T7-JjN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="B5Y-fR-oVi"/>
+                    <constraint firstItem="b8e-HD-bbB" firstAttribute="leading" secondItem="n7x-CI-VYc" secondAttribute="trailing" constant="8" symbolic="YES" id="G90-CJ-hG2"/>
+                    <constraint firstAttribute="trailing" secondItem="keE-qk-2AX" secondAttribute="trailing" constant="10" id="GAT-ta-RhM"/>
+                    <constraint firstItem="HrJ-HD-pyq" firstAttribute="top" secondItem="n7x-CI-VYc" secondAttribute="bottom" constant="5" id="YZe-da-804"/>
+                    <constraint firstItem="b8e-HD-bbB" firstAttribute="centerY" secondItem="n7x-CI-VYc" secondAttribute="centerY" id="a4q-JL-Aw5"/>
+                    <constraint firstItem="n7x-CI-VYc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="gUX-yW-cuc"/>
+                    <constraint firstItem="NX0-T7-JjN" firstAttribute="top" secondItem="HrJ-HD-pyq" secondAttribute="bottom" constant="5" id="hEa-KY-1ll"/>
+                    <constraint firstAttribute="trailing" secondItem="HrJ-HD-pyq" secondAttribute="trailing" id="lJZ-lH-yS2"/>
+                    <constraint firstItem="HrJ-HD-pyq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nBD-dj-ITD"/>
+                    <constraint firstAttribute="trailing" secondItem="b8e-HD-bbB" secondAttribute="trailing" id="vNb-3G-iAy"/>
+                    <constraint firstItem="keE-qk-2AX" firstAttribute="top" secondItem="HrJ-HD-pyq" secondAttribute="bottom" constant="5" id="xrZ-aX-1fN"/>
+                    <constraint firstItem="n7x-CI-VYc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="yNF-yi-tvt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionButton" destination="keE-qk-2AX" id="vrW-Ly-Dqn"/>
+                <outlet property="likeButton" destination="NX0-T7-JjN" id="I8r-S5-Dmq"/>
+                <outlet property="profileImageView" destination="n7x-CI-VYc" id="Pvv-Ja-9Kl"/>
+                <outlet property="recentImageView" destination="HrJ-HD-pyq" id="TcJ-uf-79j"/>
+                <outlet property="usernameLabel" destination="b8e-HD-bbB" id="pR9-9T-BIC"/>
+            </connections>
+            <point key="canvasLocation" x="130.76923076923077" y="73.222748815165872"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bookmark2" width="32" height="32"/>
+        <image name="bookmark2.fill" width="32" height="32"/>
+        <image name="like" width="32" height="32"/>
+        <image name="like.fill" width="32" height="32"/>
+        <namedColor name="Primary">
+            <color red="0.25882352941176473" green="0.37254901960784315" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

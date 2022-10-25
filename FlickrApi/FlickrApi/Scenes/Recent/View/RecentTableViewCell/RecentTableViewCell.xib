@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="282" id="KGk-i7-Jjw" customClass="RecentTableViewCell" customModule="FlickrApi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="281"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="281"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kBx-Ee-SK2">
+                        <rect key="frame" x="0.0" y="50" width="320" height="190"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="190" id="aa7-Ve-wB9"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aiv-WC-0F3">
+                        <rect key="frame" x="10" y="245" width="56" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="hBU-2B-KG4"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="" image="like.fill">
+                            <color key="titleColor" name="Primary"/>
+                            <color key="titleShadowColor" name="Primary"/>
+                        </state>
+                        <buttonConfiguration key="configuration" style="plain" image="like" title="">
+                            <color key="baseForegroundColor" name="Primary"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="didTapLikedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VR8-WM-Exb"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mlk-g5-WGZ">
+                        <rect key="frame" x="254" y="245" width="56" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="X78-m9-g6K"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="bookmark2.fill">
+                            <color key="titleColor" name="Primary"/>
+                            <color key="titleShadowColor" name="Primary"/>
+                        </state>
+                        <buttonConfiguration key="configuration" style="plain" image="bookmark2">
+                            <color key="baseForegroundColor" name="Primary"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="didTapCollectionButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ln4-Ar-tdm"/>
+                        </connections>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2cc-cu-l5y">
+                        <rect key="frame" x="10" y="5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="dT6-gU-ynQ"/>
+                            <constraint firstAttribute="height" constant="40" id="ivB-de-csi"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="538-BH-WnU">
+                        <rect key="frame" x="58" y="15" width="262" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Aiv-WC-0F3" firstAttribute="top" secondItem="kBx-Ee-SK2" secondAttribute="bottom" constant="5" id="7eF-bo-26D"/>
+                    <constraint firstItem="2cc-cu-l5y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="DCu-WG-NxR"/>
+                    <constraint firstItem="Mlk-g5-WGZ" firstAttribute="top" secondItem="kBx-Ee-SK2" secondAttribute="bottom" constant="5" id="IQK-SK-tQY"/>
+                    <constraint firstItem="Aiv-WC-0F3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="N8I-PY-yPs"/>
+                    <constraint firstItem="kBx-Ee-SK2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OM5-x5-jaG"/>
+                    <constraint firstAttribute="trailing" secondItem="Mlk-g5-WGZ" secondAttribute="trailing" constant="10" id="V1V-3s-v7I"/>
+                    <constraint firstItem="2cc-cu-l5y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Yzm-X1-SbN"/>
+                    <constraint firstAttribute="trailing" secondItem="538-BH-WnU" secondAttribute="trailing" id="cRI-DL-HeX"/>
+                    <constraint firstAttribute="trailing" secondItem="kBx-Ee-SK2" secondAttribute="trailing" id="dqY-Qf-54l"/>
+                    <constraint firstItem="538-BH-WnU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="kmp-UT-kVz"/>
+                    <constraint firstItem="538-BH-WnU" firstAttribute="leading" secondItem="2cc-cu-l5y" secondAttribute="trailing" constant="8" symbolic="YES" id="leE-bI-NWg"/>
+                    <constraint firstItem="kBx-Ee-SK2" firstAttribute="top" secondItem="2cc-cu-l5y" secondAttribute="bottom" constant="5" id="s3l-jP-cUa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionButton" destination="Mlk-g5-WGZ" id="Y6W-jJ-Rkp"/>
+                <outlet property="likeButton" destination="Aiv-WC-0F3" id="mh1-Ed-xys"/>
+                <outlet property="profileImageView" destination="2cc-cu-l5y" id="kW6-ED-NcS"/>
+                <outlet property="recentImageView" destination="kBx-Ee-SK2" id="PP0-Ig-3Mz"/>
+                <outlet property="usernameLabel" destination="538-BH-WnU" id="IeR-ea-9Rp"/>
+            </connections>
+            <point key="canvasLocation" x="127.69230769230769" y="71.445497630331744"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bookmark2" width="32" height="32"/>
+        <image name="bookmark2.fill" width="32" height="32"/>
+        <image name="like" width="32" height="32"/>
+        <image name="like.fill" width="32" height="32"/>
+        <namedColor name="Primary">
+            <color red="0.25882352941176473" green="0.37254901960784315" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
